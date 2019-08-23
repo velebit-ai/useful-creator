@@ -118,7 +118,14 @@ class RegistryCreator(BaseCreator):
 
         Returns:
             object: Instance created from config.
+
+        Raises:
+            AssertionError: When `config` is empty or contains more than a
+                single key
+            KeyError: When registry key extracted from the config is not
+                registered
         """
+        assert len(config) == 1
         name, params = next(iter(config.items()))
         if params is None:
             params = {}
