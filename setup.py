@@ -8,16 +8,16 @@ with open('requirements.txt') as f:
 setup(
     name="useful-creator",
     version=__version__,  # noqa
-    description="Useful packages",
+    description="Creating instances from dictionaries",
     classifiers=[
-        "Licence :: Other/Proprietary Licence",
+        "Licence :: OSI Approved :: MIT License",
 
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6"
     ],
-    url="https://gitlab.com/velebit/useful/creator",
-    author="Velebit",
-    author_email="dev@velebit.ai",
+    url="https://github.com/velebit-ai/useful-creator",
+    author="Velebit AI",
+    author_email="contact@velebit.ai",
     packages=["useful.creator"],
     install_requires=requirements,
     include_package_data=True
