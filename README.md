@@ -56,7 +56,7 @@ SomeExample: 1
 
 Using RegistryCreator allows us to simply use names `Example` or `Another` in configuration dictionaries. In general, the configuration format is
 
-```json
+```
 {
     str: dict
 }
