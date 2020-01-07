@@ -30,6 +30,9 @@ class BaseCreator(ABC):
     def create(self, config, *args, **kwargs):
         pass
 
+    def __call__(self, config, *args, **kwargs):
+        return self.create(config, *args, **kwargs)
+
     @staticmethod
     def unpack_and_create(cls, config):
         """
@@ -202,7 +205,7 @@ class GenericCreator(BaseCreator):
         module = importlib.import_module(module)
 
         # extract params
-        params = config[self.params_key]
+        params = config.get(self.params_key)
         if params is None:
             params = {}
 
